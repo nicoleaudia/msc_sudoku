@@ -12,7 +12,7 @@ int main() {
   cout << "============= Pre-supplied functions =============\n\n";
 
   cout << "Calling load_board():\n";
-  load_board("easy.dat", board);
+  load_board("practice.dat", board);
 
   cout << '\n';
 	cout << "Displaying Sudoku board with display_board():\n";
@@ -37,7 +37,7 @@ int main() {
 
   cout << "=================== Question 2 ===================\n\n";
 
-  load_board("easy.dat", board);
+  load_board("practice.dat", board);
 
   // Should be OK
   cout << "Putting '1' into I8 is ";
@@ -47,19 +47,19 @@ int main() {
   cout << "a valid move. The board is:\n";
   display_board(board);
 
-  // write more tests
+  // write more tests 
 
   cout << "=================== Question 3 ===================\n\n";
 
-  load_board("easy.dat", board);
-  if (save_board("easy-copy.dat", board)) {
-    cout << "Save board to 'easy-copy.dat' successful.\n";
+  load_board("practice.dat", board);
+  if (save_board("practice-copy.dat", board)) {
+    cout << "Save board to 'practice-copy.dat' successful.\n";
   } else {
     cout << "Save board failed.\n";
   }
   cout << '\n';
 
-  cout << "=================== Question 4 ===================\n\n";
+  /* cout << "=================== Question 4 ===================\n\n";
 
   load_board("easy.dat", board);
   if (solve_board(board)) {
@@ -83,7 +83,8 @@ int main() {
 
   cout << "=================== Question 5 ===================\n\n";
 
-  // write more tests
+  // write more tests */
 
   return 0;
 }
+ 

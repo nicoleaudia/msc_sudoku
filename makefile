@@ -1,2 +1,2 @@
-sudoku: main.cpp sudoku.cpp
-	g++ -g -Wall main.cpp sudoku.cpp -o sudoku
+sudoku: main.cpp sudoku.cpp sudoku.h
+	g++ -g -Wall main.cpp sudoku.cpp sudoku.h -o sudoku

@@ -153,14 +153,14 @@ bool check_legality(int digit_row, int digit_col, char digit, char board[9][9]){
   
   // check for repeat digit within row 
   row = digit_row;
-    for (col = 0; col < 9 ; col++){
+    for (col = 0; col < 9; col++){
       if (board[row][col] == digit)
 	return false;
     }
 
   // check for repeat digit within column
   col = digit_col;
-  for (row = 0; row < 9 ; row++){
+  for (row = 0; row < 9; row++){
     if (board[row][col] == digit)
       return false;
     }

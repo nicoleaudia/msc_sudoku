@@ -48,7 +48,38 @@ int main() {
   cout << "a valid move. The board is:\n";
   display_board(board);
 
-  // write more tests 
+  // test non-valid position
+  cout << "Putting '1' into K8 is ";
+  if (!make_move("K8", '1', board)) {
+    cout << "NOT ";
+  }
+  cout << "a valid move. The board is:\n";
+  display_board(board);
+
+  // test non-valid digit
+  cout << "Putting '0' into I8 is ";
+  if (!make_move("I8", '0', board)) {
+    cout << "NOT ";
+  }
+  cout << "a valid move. The board is:\n";
+  display_board(board);
+
+  // test valid position and digit, but illegal move due to row conflict
+  cout << "Putting '4' into B9 is ";
+  if (!make_move("B9", '4', board)) {
+    cout << "NOT ";
+  }
+  cout << "a valid move. The board is:\n";
+  display_board(board);
+
+  // test valid position and digit, but illegal move due to minisquare conflict
+  cout << "Putting '2' into A2 is ";
+  if (!make_move("A2", '2', board)) {
+    cout << "NOT ";
+  }
+  cout << "a valid move. The board is:\n";
+  display_board(board);
+  
 
   cout << "=================== Question 3 ===================\n\n";
 

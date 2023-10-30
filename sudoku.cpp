@@ -77,7 +77,7 @@ void display_board(const char board[9][9]) {
 bool is_complete(const char board[9][9]){
   for (int row = 0; row < 9; row++){
     for (int col = 0; col < 9; col++){
-      if (board[row][col] < '1' || board[row][col] < '9')
+      if (board[row][col] < '1' || board[row][col] > '9')
 	return false;
       if (board[row][col] == '.')
 	return false;

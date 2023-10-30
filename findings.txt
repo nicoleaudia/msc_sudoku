@@ -1,1 +1,13 @@
 Summarise your findings here (see specification).
+
+Mystery1 is the "extremely hard" board, Mystery2 cannot be solved, and Mystery3 is the "hard" board.
+
+I came to this conclusion by copying the solve_board function and modifying it into a new function called solve_board_count which includes a counter variable, call_count, that increments each time the function is run.
+
+The function solve_board_count (and solve_board) utilizes recursion. Each time the function is run and the input is determined to be valid for that space on the board, the input value is stored in a new stack frame on top of the previous stack frame in the memory. Then, the function calls itself again (recursion), and the cycle continues until an input is determined not valid or until the board is full. If an input is determined not valid, the stack frame is popped off the stack, revealing the previous stack frame. This "goes back" a position in the sudoku board (ie, goes to the previous element of the 2D array), and the input is incremented within the range allowed until a valid input is found. If a valid input isn't found at that position, the stack frame is popped off and the computer "goes back" a position again and tests for the next valid input, and so on. This strategy allows every valid input combination for the 2D array to be tested until the solution is found (or isn't, if it's not solvable).
+
+Because of this recursive functionality, the number of times the function is run is an appropriate way to measure the level of difficulty for the computer to solve the puzzle. The more times the function was run, the more times the computer had to test different input, including going back and testing different inputs for previously tested positions if the current input value prevented further solving of the puzzle.
+
+Mystery1 called the function 421,547 times, Mystery2 called the function 11,533 times and ultimately could not be solved, and Mystery3 called the function 14,134 times. This demonstrates that Mystery1 was more difficult for the computer to solve than Mystery3. Mystery2 has the lowest count, but in this count, every input at every position was tested, and ultimately it was determined that no combination of values in the elements of the 2D array would allow this puzzle to be solved; thus, the Boolean function returned false and the user was informed that no solution could be found.
+
+As a note: the way a computer solves this puzzle is different than how a human would likely solve it, so the level of difficulty I measured is meant to be a measure of the difficulty for the computer only.

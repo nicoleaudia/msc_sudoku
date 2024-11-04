@@ -1,7 +1,11 @@
 *compilation*
 .#*compilation*
+*compilation*
 .nfs*
 .DS_Store
 .idea/
 *.swp
 .vscode/
+easy-copy.dat
+practice-copy.dat
+findings.txt

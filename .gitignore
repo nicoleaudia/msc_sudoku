@@ -1,0 +1,7 @@
+*compilation*
+.#*compilation*
+.nfs*
+.DS_Store
+.idea/
+*.swp
+.vscode/

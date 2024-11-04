@@ -6,6 +6,13 @@
 .idea/
 *.swp
 .vscode/
+easy.dat
+medium.dat
+hard.dat
+mystery1.dat
+mystery2.dat
+mystery3.dat
+blank.dat
 easy-copy.dat
 practice-copy.dat
 findings.txt
